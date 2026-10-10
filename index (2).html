@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Beginner's Guide to the Ghana Stock Market | Free Ebook</title>
+  <meta name="description" content="The book that turns confusion into confidence — and cedis into wealth. Start investing on the Ghana Stock Exchange with zero jargon and a clear 30-day plan.">
+  
+  <!-- Open Graph for Facebook -->
+  <meta property="og:title" content="The Beginner's Guide to the Ghana Stock Market">
+  <meta property="og:description" content="You work hard. You save when you can. But somehow the money never seems to grow. This free guide changes that.">
+  <meta property="og:type" content="website">
+  
+  <style>
+    :root {
+      --black: #0a0a0a;
+      --dark: #111111;
+      --card: #1a1a1a;
+      --gold: #c9a227;
+      --gold-light: #e0bc4a;
+      --terracotta: #c45c3e;
+      --terracotta-dark: #a34a32;
+      --cream: #f5f0e8;
+      --text: #e8e4dc;
+      --text-muted: #a09a90;
+      --white: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Georgia', 'Times New Roman', serif;
+      background: var(--black);
+      color: var(--text);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Top bar */
+    .topbar {
+      background: var(--dark);
+      border-bottom: 1px solid rgba(201, 162, 39, 0.25);
+      padding: 11px 20px;
+      text-align: center;
+      font-size: 0.72rem;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-weight: 500;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 60px 22px 50px;
+      text-align: center;
+      background: radial-gradient(ellipse at top, #1a1508 0%, var(--black) 65%);
+      position: relative;
+    }
+
+    .hero-label {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      margin-bottom: 22px;
+      font-weight: 600;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.1rem, 7vw, 3.4rem);
+      font-weight: 400;
+      line-height: 1.15;
+      margin-bottom: 18px;
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
+      color: var(--white);
+    }
+
+    .hero h1 .gold {
+      color: var(--gold);
+    }
+
+    .hero-sub {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      max-width: 480px;
+      margin: 0 auto 32px;
+      font-style: italic;
+      line-height: 1.55;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      background: var(--terracotta);
+      color: var(--white);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 16px 34px;
+      border-radius: 4px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      letter-spacing: 0.3px;
+    }
+
+    .cta-btn:hover {
+      background: var(--terracotta-dark);
+      transform: translateY(-1px);
+    }
+
+    .cta-note {
+      margin-top: 14px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    /* Pain section */
+    .pain {
+      padding: 50px 22px;
+      text-align: center;
+      max-width: 620px;
+      margin: 0 auto;
+    }
+
+    .pain-label {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    .pain p {
+      font-size: 1.25rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 8px;
+    }
+
+    .pain p strong {
+      color: var(--white);
+      font-weight: 400;
+    }
+
+    .pain .accent {
+      color: var(--gold);
+      font-style: italic;
+      margin-top: 18px;
+      display: block;
+    }
+
+    /* Story - Three Scenes */
+    .story {
+      padding: 20px 22px 60px;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .scene {
+      display: grid;
+      grid-template-columns: 28px 1fr;
+      gap: 18px;
+      margin-bottom: 36px;
+      position: relative;
+    }
+
+    .scene:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      left: 10px;
+      top: 28px;
+      bottom: -36px;
+      width: 1px;
+      background: linear-gradient(to bottom, var(--gold), transparent);
+      opacity: 0.4;
+    }
+
+    .scene-dot {
+      width: 11px;
+      height: 11px;
+      border: 1.5px solid var(--gold);
+      border-radius: 50%;
+      margin-top: 7px;
+      background: var(--black);
+    }
+
+    .scene-label {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: 0.68rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    .scene p {
+      font-size: 1.05rem;
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    .scene p em {
+      color: var(--text-muted);
+      font-style: italic;
+    }
+
+    .scene p .highlight {
+      color: var(--gold);
+    }
+
+    .story-closer {
+      text-align: center;
+      margin-top: 10px;
+      padding: 28px 20px;
+      border-top: 1px solid rgba(201, 162, 39, 0.2);
+      border-bottom: 1px solid rgba(201, 162, 39, 0.2);
+    }
+
+    .story-closer p {
+      font-size: 1.25rem;
+      font-style: italic;
+      color: var(--cream);
+      line-height: 1.55;
+    }
+
+    .story-closer p span {
+      color: var(--gold);
+    }
+
+    /* What's Inside */
+    .inside {
+      padding: 60px 22px;
+      background: var(--dark);
+    }
+
+    .inside-inner {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      text-align: center;
+      margin-bottom: 14px;
+      font-weight: 600;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 1.9rem;
+      color: var(--white);
+      margin-bottom: 40px;
+      font-weight: 400;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: rgba(201, 162, 39, 0.15);
+      border: 1px solid rgba(201, 162, 39, 0.2);
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 40px;
+    }
+
+    .stat {
+      background: var(--card);
+      padding: 28px 16px;
+      text-align: center;
+    }
+
+    .stat .num {
+      font-size: 2.2rem;
+      font-weight: 400;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 6px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    .stat .label {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .chapters {
+      display: grid;
+      gap: 16px;
+    }
+
+    .chapter {
+      background: var(--card);
+      border-left: 3px solid var(--gold);
+      padding: 22px 24px;
+      border-radius: 0 6px 6px 0;
+    }
+
+    .chapter h3 {
+      font-size: 1.15rem;
+      color: var(--white);
+      margin-bottom: 6px;
+      font-weight: 400;
+    }
+
+    .chapter p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* Big number callout */
+    .callout {
+      padding: 50px 22px;
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .callout p {
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .callout .big {
+      font-size: 1.5rem;
+      color: var(--white);
+      margin: 16px 0;
+    }
+
+    .callout .big span {
+      color: var(--gold);
+    }
+
+    /* Form Section */
+    .form-section {
+      padding: 60px 22px 70px;
+      background: linear-gradient(180deg, var(--dark) 0%, #0d0a05 100%);
+      text-align: center;
+    }
+
+    .form-section h2 {
+      font-size: 1.9rem;
+      color: var(--white);
+      margin-bottom: 10px;
+      font-weight: 400;
+    }
+
+    .form-section .sub {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      margin-bottom: 32px;
+      font-style: italic;
+    }
+
+    .form-box {
+      background: var(--card);
+      border: 1px solid rgba(201, 162, 39, 0.25);
+      border-radius: 8px;
+      padding: 32px 28px;
+      max-width: 420px;
+      margin: 0 auto;
+    }
+
+    .form-box input {
+      width: 100%;
+      padding: 14px 16px;
+      background: var(--black);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 4px;
+      font-size: 1rem;
+      color: var(--white);
+      margin-bottom: 12px;
+      outline: none;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      transition: border-color 0.2s;
+    }
+
+    .form-box input::placeholder {
+      color: #666;
+    }
+
+    .form-box input:focus {
+      border-color: var(--gold);
+    }
+
+    .form-box .cta-btn {
+      width: 100%;
+      margin-top: 6px;
+      font-size: 1.05rem;
+      padding: 16px;
+    }
+
+    .form-note {
+      font-size: 0.75rem;
+      color: #666;
+      margin-top: 16px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    /* Final line */
+    .final {
+      text-align: center;
+      padding: 40px 22px;
+      border-top: 1px solid rgba(201, 162, 39, 0.15);
+    }
+
+    .final p {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      font-style: italic;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 28px 20px 40px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: 0.78rem;
+      color: #555;
+    }
+
+    footer span {
+      color: var(--gold);
+    }
+
+    /* Sticky mobile CTA */
+    .sticky-cta {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: var(--black);
+      border-top: 1px solid rgba(201, 162, 39, 0.3);
+      padding: 12px 16px;
+      z-index: 100;
+    }
+
+    .sticky-cta .cta-btn {
+      width: 100%;
+      padding: 14px;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 640px) {
+      .sticky-cta {
+        display: block;
+      }
+      body {
+        padding-bottom: 72px;
+      }
+    }
+
+    @media (min-width: 640px) {
+      .stats {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    Story Edition · Ghana Finance Series
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-label">Free Digital Ebook</div>
+    <h1>Your story starts<br>on <span class="gold">page one</span>.</h1>
+    <p class="hero-sub">
+      The book that turns confusion into confidence — and cedis into wealth.
+    </p>
+    <a href="#get-it" class="cta-btn">Get Your Free Copy Now</a>
+    <p class="cta-note">Instant download · Zero jargon · Written for complete beginners</p>
+  </section>
+
+  <!-- PAIN -->
+  <section class="pain">
+    <div class="pain-label">Sound familiar?</div>
+    <p>You work hard.</p>
+    <p>You save when you can.</p>
+    <p>But somehow, the money <strong>never seems to grow</strong>.</p>
+    <span class="accent">Inflation takes a little. Life takes the rest.</span>
+  </section>
+
+  <!-- THREE SCENES -->
+  <section class="story">
+    <div class="scene">
+      <div class="scene-dot"></div>
+      <div>
+        <div class="scene-label">Scene One</div>
+        <p>Every month, Kofi’s salary arrived. Every month, it quietly disappeared — <em>rent, food, data bundles, repeat</em>. Ten years of work. Nothing to show.</p>
+      </div>
+    </div>
+
+    <div class="scene">
+      <div class="scene-dot"></div>
+      <div>
+        <div class="scene-label">Scene Two</div>
+        <p>One evening, he discovered the Ghana Stock Exchange. No finance degree. No rich uncle. Just <span class="highlight">a small, deliberate first step</span> — and a decision to never be broke and busy again.</p>
+      </div>
+    </div>
+
+    <div class="scene">
+      <div class="scene-dot"></div>
+      <div>
+        <div class="scene-label">Scene Three — Your Turn</div>
+        <p>Five years later, <span class="highlight">his money worked while he slept</span>. Dividends. Growth. Options. This is the story this book writes for you.</p>
+      </div>
+    </div>
+
+    <div class="story-closer">
+      <p>The only difference between Kofi then and Kofi now was <span>one book</span> and the courage to begin.</p>
+    </div>
+  </section>
+
+  <!-- WHAT'S INSIDE -->
+  <section class="inside">
+    <div class="inside-inner">
+      <div class="section-label">What's Inside</div>
+      <h2 class="section-title">Everything you need. Nothing you don’t.</h2>
+
+      <div class="stats">
+        <div class="stat">
+          <div class="num">8</div>
+          <div class="label">Deep-Dive Chapters</div>
+        </div>
+        <div class="stat">
+          <div class="num">30</div>
+          <div class="label">Day Action Plan</div>
+        </div>
+        <div class="stat">
+          <div class="num">0</div>
+          <div class="label">Prior Knowledge Needed</div>
+        </div>
+        <div class="stat">
+          <div class="num">∞</div>
+          <div class="label">Wealth Potential Unlocked</div>
+        </div>
+      </div>
+
+      <div class="chapters">
+        <div class="chapter">
+          <h3>What Is the Stock Market?</h3>
+          <p>No jargon. No confusion. A clear, honest explanation of how the Ghana Stock Exchange works — and why it belongs in your life.</p>
+        </div>
+        <div class="chapter">
+          <h3>How Stocks Make You Money</h3>
+          <p>Dividends. Capital growth. Compounding. Discover how <span style="color:var(--gold)">GHS 5,000 today</span> can silently become nearly half a million cedis — without adding another cedi. Ever.</p>
+        </div>
+        <div class="chapter">
+          <h3>Buy Your First Share. Choose the Right One.</h3>
+          <p>Step-by-step: open a broker account, get your CSD number, place your first order — plus a simple framework for picking quality GSE companies.</p>
+        </div>
+        <div class="chapter">
+          <h3>Build Your Portfolio. Master Your Mind.</h3>
+          <p>The 3-Bucket Strategy for your money — and the emotional intelligence chapter that teaches you to stay calm when markets move.</p>
+        </div>
+        <div class="chapter">
+          <h3>Beyond Stocks. Beyond Mistakes.</h3>
+          <p>T-Bills. Bonds. Mutual Funds. REITs. Your complete investment toolkit — plus the 7 costliest beginner mistakes and how to avoid every one.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALLOUT -->
+  <section class="callout">
+    <p>The Ghana Stock Exchange has been building quiet wealth for decades.</p>
+    <p class="big">Today, it starts building <span>yours</span>.</p>
+  </section>
+
+  <!-- FORM -->
+  <section class="form-section" id="get-it">
+    <h2>Get your free copy</h2>
+    <p class="sub">Instant download. Start today.</p>
+
+    <div class="form-box">
+      <form id="leadForm" onsubmit="handleSubmit(event)">
+        <input type="text" name="name" placeholder="Your first name" required>
+        <input type="email" name="email" placeholder="Your best email" required>
+        <input type="tel" name="phone" placeholder="WhatsApp number (optional)">
+        <button type="submit" class="cta-btn">Send Me the Free Guide →</button>
+      </form>
+      <p class="form-note">No spam. No credit card. Just the guide that starts your story.</p>
+    </div>
+  </section>
+
+  <div class="final">
+    <p>Your story is unwritten.</p>
+  </div>
+
+  <footer>
+    <p>The Beginner’s Guide to the Ghana Stock Market · <span>Ghana Finance Series</span></p>
+    <p style="margin-top:6px;">8 chapters. Zero jargon. One complete roadmap to your first investment.</p>
+  </footer>
+
+  <!-- Sticky CTA -->
+  <div class="sticky-cta">
+    <a href="#get-it" class="cta-btn">Get Free Guide →</a>
+  </div>
+
+  <script>
+    function handleSubmit(e) {
+      e.preventDefault();
+      const form = e.target;
+      const name = form.name.value.trim() || 'Friend';
+
+      form.innerHTML = `
+        <div style="text-align:center;padding:12px 0 8px;">
+          <div style="font-size:2.4rem;margin-bottom:14px;">✓</div>
+          <h3 style="color:#e8e4dc;font-size:1.3rem;margin-bottom:10px;font-weight:400;">You're in, ${name}.</h3>
+          <p style="color:#a09a90;font-size:0.95rem;line-height:1.5;margin-bottom:22px;">
+            Your free guide is ready. Click below to download it instantly.
+          </p>
+          <a href="ghana-stock-market-guide.pdf" 
+             download="The-Beginners-Guide-to-the-Ghana-Stock-Market.pdf"
+             class="cta-btn" 
+             style="display:inline-block;width:100%;padding:16px;font-size:1.05rem;text-decoration:none;margin-bottom:16px;">
+            Download the Guide Now →
+          </a>
+          <p style="color:#c9a227;font-size:0.9rem;font-style:italic;">
+            Your chapter starts today.
+          </p>
+        </div>
+      `;
+    }
+  </script>
+
+</body>
+</html>
